@@ -1,4 +1,5 @@
 <?php
+session_start();
 if(isset($_POST["username"]) && isset ($_POST["password"]) ){
 $username = $_POST["username"];
 $password = $_POST["password"];
@@ -16,8 +17,8 @@ $total = $q-> rowCount();
 
 if ($total)
 {
-    $_SESSION['user'] = true;
-	header("Location: ./authentication.php");
+    $_SESSION['user'] = $_POST['username'];
+	header("Location: ./verifier.php?id=$username");
 }
 else
 { 
