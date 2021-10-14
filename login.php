@@ -18,7 +18,9 @@ $total = $q-> rowCount();
 if ($total)
 {
     $_SESSION['user'] = $_POST["username"];
-	header("Location: ./selector.php");
+    header("Location: ./selector.php?id=$username");
+    // header("Location: ./2fa_check.php");
+	// header("Location: ./verifier.php?id=$username");
 }
 else
 { 

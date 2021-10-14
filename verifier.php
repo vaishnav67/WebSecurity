@@ -15,7 +15,7 @@
 <body>
     <fieldset style="width: 45em; color: white; margin: 20px; padding: 30px;">
         <legend style="background-color: #2653ac;">Security Questions</legend>
-        <form method="POST" action="#">
+        <form method="POST" action="#" autocomplete="off">
             <br>
             In what city were you born?<br>
             <input type="text" name="q1" required="required" style="width: 30em;"><br><br>
@@ -47,7 +47,7 @@
     $q->execute();
     $data = $q->fetch(PDO::FETCH_ASSOC);
     if($_POST['q1']==$data['q1'] && $_POST['q2']==$data['q2'] && $_POST['q3']==$data['q3'] && $_POST['q4']==$data['q4']){
-        echo "Success";
+        header("Location: ./success.html");
     }
 }
 ?>
