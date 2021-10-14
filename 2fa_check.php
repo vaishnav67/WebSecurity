@@ -10,8 +10,8 @@
                 $secret = "INSERT_SECRET_KEY";
                 if ($tfa->verifyCode($secret, $_POST["verification"]) === true) {
                     header("Location: ./success.html");
-                } else { ?>
-                    <span style="color:#c00">FAIL</span>
-                <?php }
+                } else { 
+                    header("Location: ./fail.html");
+                 }
             }
 ?>
