@@ -50,12 +50,12 @@
         echo '(write) a 404 page';
     }
     if(isset($_POST["btn1"])){
-        header("Location: ./success.html");
+        header("Location: ./otp.html");
     }
     if(isset($_POST["btn2"])){
-        header("Location: ./2fa_check.php");
+        header("Location: ./2fa_check.html");
     }
     if(isset($_POST["btn3"])){
-        header("Location: ./success.html");
+        header("Location: ./verifier.php?id=".$_GET['id']);
     }
 ?>

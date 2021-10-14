@@ -31,11 +31,6 @@
 </body>
 </html>
 <?php
-    if(isset($_GET['id'])){
-        echo 'Welcome '.$_GET['id'];
-        }else {
-        echo '(write) a 404 page';
-    }
     if(isset($_POST["submitbtn"])){
     include("./database.php");
     $pdo = Database::connect();
@@ -48,6 +43,9 @@
     $data = $q->fetch(PDO::FETCH_ASSOC);
     if($_POST['q1']==$data['q1'] && $_POST['q2']==$data['q2'] && $_POST['q3']==$data['q3'] && $_POST['q4']==$data['q4']){
         header("Location: ./success.html");
+    }
+    else{
+        header("Location: ./fail.html");
     }
 }
 ?>
