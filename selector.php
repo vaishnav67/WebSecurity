@@ -50,7 +50,7 @@
         echo '(write) a 404 page';
     }
     if(isset($_POST["btn1"])){
-        header("Location: ./otp.html");
+        header("Location: ./mail.php");
     }
     if(isset($_POST["btn2"])){
         header("Location: ./2fa_check.html");

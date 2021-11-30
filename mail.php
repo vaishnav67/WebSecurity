@@ -5,6 +5,14 @@ require 'vendor/autoload.php';
 session_start();
 $rndno=rand(100000, 999999);
 $mail = new PHPMailer(true);
+include("./database.php");
+$pdo = Database::connect();
+$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+$sql = "SELECT email FROM users WHERE username= :username";
+$q = $pdo->prepare($sql);
+$q->bindParam(':username', $_SESSION['user'], PDO::PARAM_STR);
+$q->execute();
+$data = $q->fetch(PDO::FETCH_ASSOC);
 try {
     $mail->SMTPDebug = 2;                   // Enable verbose debug output
     $mail->isSMTP();                        // Set mailer to use SMTP
@@ -15,15 +23,13 @@ try {
     $mail->SMTPSecure = 'tls';              // Enable TLS encryption, 'ssl' also accepted
     $mail->Port       = 25;
     $mail->setFrom('VaishKeer@test.com', 'Name');           // Set sender of the mail
-    $mail->addAddress($_POST['email']);           // Add a recipient
+    $mail->addAddress($data['email']);           // Add a recipient
     $mail->isHTML(true);                                  
     $mail->Subject = 'OTP';
     $mail->Body    = "OTP: ".$rndno."";
     $mail->AltBody = "OTP: ".$rndno."";
     $mail->send();
     echo "Mail has been sent successfully!";
-    $_SESSION['email']=$_POST['email'];
-    $_SESSION['phone']=$_POST['phone'];
     $_SESSION['otp']=$rndno;
     header( "Location: ./otp.php" );
 } catch (Exception $e)

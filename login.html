@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="login.css">
     
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="698791051208-jpt971igd36i9evnduglp47s2jid91p7.apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content=".apps.googleusercontent.com">
     <script>
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
@@ -27,6 +27,7 @@
                   <input type="password" name="password" placeholder="Password" required="required" autocomplete="current-password" />
                   <button type="submit" class="btn btn-primary btn-block btn-large">Log in</button>
               </form>
+              <br><a href="signup.html" class="btn btn-primary btn-block btn-large" role="button">Sign Up</a>
             <div class="g-signin2" style="text-align:center;width: 100px;margin: 10px auto;" data-onsuccess="onSignIn"></div>
         </div>
     </body>

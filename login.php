@@ -3,24 +3,29 @@ session_start();
 if(isset($_POST["username"]) && isset ($_POST["password"]) ){
 $username = $_POST["username"];
 $password = $_POST["password"];
-
+$hash_variable_salt = password_hash($password,PASSWORD_DEFAULT, array('saltsaltsaltsalt' => 9));
 include("./database.php");
 $pdo = Database::connect();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$sql = "SELECT * FROM users WHERE username= :username AND password= :password";
+$sql = "SELECT password FROM users WHERE username= :username";
 $q = $pdo->prepare($sql);
 $q->bindParam(':username', $username, PDO::PARAM_STR);
-$q->bindParam(':password', $password, PDO::PARAM_STR);
 $q->execute();
 
 $total = $q-> rowCount();
-
 if ($total)
 {
-    $_SESSION['user'] = $_POST["username"];
-    header("Location: ./selector.php?id=$username");
-    // header("Location: ./2fa_check.php");
-	// header("Location: ./verifier.php?id=$username");
+    $data = $q->fetch(PDO::FETCH_ASSOC);
+    $check=password_verify($password,$data['password']);
+    if($check == true)
+    {
+        $_SESSION['user'] = $_POST["username"];
+        header("Location: ./selector.php?id=$username");
+    }
+    else
+    { 
+        echo '<span style="font-size:20px; font-weight:600; color:#D11111">Incorrect username or password</span>';
+    }
 }
 else
 { 

@@ -1,7 +1,7 @@
 <?php
 class Database 
 {
-	private static $dbName = 'users' ; 
+	private static $dbName = 'websec' ; 
 	private static $dbHost = 'localhost' ;
 	private static $dbUsername = 'root';
 	private static $dbUserPassword = '';

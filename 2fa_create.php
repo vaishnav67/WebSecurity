@@ -1,13 +1,15 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html>
 <head>
-    <title>Demo</title>
+    <title>Authy</title>
     <link rel="stylesheet" href="login.css">
 </head>
 <body style="color:white">
     <ol>
         <?php
-
             require __DIR__ . '/vendor/autoload.php';
             spl_autoload_register(function ($className) {
                 include_once str_replace(array('RobThree\\Auth', '\\'), array(__DIR__.'/../lib', '/'), $className) . '.php';
@@ -18,6 +20,15 @@
         <li>First create a secret and associate it with a user</li>
         <?php
             $secret = $tfa->createSecret();
+            //
+            include("./database.php");
+            $pdo = Database::connect();
+            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $sql = "UPDATE users SET secret = ? WHERE username= ?";
+            $q = $pdo->prepare($sql);
+            $q->execute(array($secret,$_GET['id']));
+            $_SESSION['user'] = $_GET['id'];
+            //
         ?>
         <li>
             Next create a QR code and let the user scan it:<br>
@@ -39,5 +50,7 @@
             <?php } ?>
         </li>
     </ol>
+    <br><br>
+    <a href="security.html" class="btn btn-primary btn-large" style="margin-left:1em;">Generate security questions</a>
 </body>
 </html>

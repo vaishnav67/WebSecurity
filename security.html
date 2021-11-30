@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <title>Authy</title>
+    <link rel="stylesheet" href="login.css">
+    <style>
+        input{
+            width: 20em;
+        }
+    </style>
+</head>
+<body style="color:white">
+    <h1>Security questions</h1>
+    <form method="POST" action="security.php" style="margin-left: 4em;">
+        Place of birth:<br>
+        <input type="text" name="q1" required="required" autocomplete="off"><br><br>
+        Name of first pet:<br>
+        <input type="text" name="q2" required="required" autocomplete="off"><br><br>
+        Car model:<br>
+        <input type="text" name="q3" required="required" autocomplete="off"><br><br>
+        Favourite food:<br>
+        <input type="text" name="q4" required="required"  autocomplete="off"><br><br>
+        <button type="submit" name="submit" class="btn btn-primary btn-large">Submit</button>
+    </form>
+    <br><br>
+</body>
+</html>
