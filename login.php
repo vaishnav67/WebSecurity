@@ -7,9 +7,8 @@ $hash_variable_salt = password_hash($password,PASSWORD_DEFAULT, array('saltsalts
 include("./database.php");
 $pdo = Database::connect();
 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-$sql = "SELECT password FROM users WHERE username= :username";
+$sql = "SELECT password FROM users WHERE username='$username'";
 $q = $pdo->prepare($sql);
-$q->bindParam(':username', $username, PDO::PARAM_STR);
 $q->execute();
 
 $total = $q-> rowCount();

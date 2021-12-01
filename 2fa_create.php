@@ -32,7 +32,7 @@ session_start();
         ?>
         <li>
             Next create a QR code and let the user scan it:<br>
-            <img src="<?php echo $tfa->getQRCodeImageAsDataUri('Demo', $secret); ?>"><br>
+            <img src="<?php echo $tfa->getQRCodeImageAsDataUri($_GET['id'], $secret); ?>"><br>
             ...or display the secret to the user for manual entry:
             <?php echo chunk_split($secret, 4, ' '); ?>
         </li>

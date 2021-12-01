@@ -18,8 +18,8 @@ try {
     $mail->isSMTP();                        // Set mailer to use SMTP
     $mail->Host       = 'smtp.mailtrap.io;';    // Specify main SMTP server
     $mail->SMTPAuth   = true;               // Enable SMTP authentication
-    $mail->Username   = 'USER';     // SMTP username
-    $mail->Password   = 'PASS';         // SMTP password
+    $mail->Username   = 'USERNAME';     // SMTP username
+    $mail->Password   = 'PASSWORD';         // SMTP password
     $mail->SMTPSecure = 'tls';              // Enable TLS encryption, 'ssl' also accepted
     $mail->Port       = 25;
     $mail->setFrom('VaishKeer@test.com', 'Name');           // Set sender of the mail

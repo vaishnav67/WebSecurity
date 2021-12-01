@@ -1,57 +1,312 @@
-<!-- banking application -->
+<!DOCTYPE html>
 <html>
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta charset="utf-8">
-  </head>
-    <style>
-      body {
-        text-align: center;
-        padding: 40px 0;
-        background: #EBF0F5;
-      }
-        h1 {
-          color: #88B04B;
-          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
-          font-weight: 900;
-          font-size: 40px;
-          margin-bottom: 10px;
-        }
-        p, a {
-          color: #404F5E;
-          font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
-          font-size:20px;
-          margin: 0;
-        }
-      i {
-        color: #9ABC66;
-        font-size: 100px;
-        line-height: 200px;
-        margin-left:-15px;
-      }
-      .card {
-        background: white;
-        padding: 60px;
-        border-radius: 4px;
-        box-shadow: 0 2px 3px #C8D0D8;
-        display: inline-block;
-        margin: 0 auto;
-      }
-    </style>
-    <body>
-      <div class="card">
-      <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
-        <i class="checkmark">✓</i>
+<head>
+    <title>Food website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</head>
+<body>
+  <div class="div" style="margin-bottom: 20px;">
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <a class="navbar-brand" href="#"><i class="fa fa-shopping-cart"></i></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+        </ul>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">
+                Cart
+              </a>
+            </li>
+        </ul>
       </div>
-        <h1>Success</h1> 
-        <p>You have successfully logged in!</p>
-        <a href="#" onclick="signOut();">Sign out</a>
-      </div>
-        <script>
-        function signOut() {
-            document.location.href = "https://www.google.com/accounts/Logout?continue=https://appengine.google.com/_ah/logout?continue=http://localhost/WebSecurity/login.html";
-        }
-        </script>
-    </body>
+    </nav>
+  </div>
+  <br><br><br>
+<link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+<div class="container">
+    <div class="row">
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Spaghetti </h1>
+                        <p>The dish is made by lightly sautéing sliced, minced, or pressed garlic in olive oil, sometimes with the addition of dried red chili flakes, and tossing with spaghetti.</p>
+                        <div>
+                            <div class="price pull-left">Rs 235</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/2641886/pexels-photo-2641886.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Chicken tikka</h1>
+                        <p>Chicken tikka is a chicken dish originating in the Indian subcontinent.</p>
+                        <div>
+                            <div class="price pull-left">Rs 225</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/1260968/pexels-photo-1260968.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Brick Oven Pizza</h1>
+                        <p>Brick Oven For Wood &amp; Gas Fired Pizza iN India. A brick oven accumulates the heat that comes from the fire, keeps it and releases it gradually.</p>
+                        <div>
+                            <div class="price pull-left">Rs 325</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/406152/pexels-photo-406152.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Salad</h1>
+                        <p>A salad made by tossing greens in a dressing, often including other vegetables like tomato and cucumber.</p>
+                        <div>
+                            <div class="price pull-left">Rs 120</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Burrito</h1>
+                        <p>A burrito is a dish in Mexican and Tex-Mex cuisine consisting of a flour tortilla wrapped into a sealed cylindrical shape around various ingredients.</p>
+                        <div>
+                            <div class="price pull-left">Rs 120</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/1624487/pexels-photo-1624487.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Chicken Biryani</h1>
+                        <p>Biryani is a mixed rice dish with its origins among the Muslims of the Indian subcontinent. It can be compared to mixing a curry, later combining it with semi-cooked rice separately.</p>
+                        <div>
+                            <div class="price pull-left">Rs 200</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/2474658/pexels-photo-2474658.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Samosa</h1>
+                        <p>A samosa is a fried or baked pastry with a savory filling, such as spiced potatoes, onions and peas.</p>
+                        <div>
+                            <div class="price pull-left">Rs 75</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Pasta In Red Sauce</h1>
+                        <p>Pasta is a type of food typically made from an unleavened dough of wheat flour mixed with water or eggs, and formed into sheets or other shapes, then cooked by boiling or baking.</p>
+                        <div>
+                            <div class="price pull-left">Rs 175</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/1633578/pexels-photo-1633578.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Burger</h1>
+                        <p>A hamburger is a sandwich consisting of one or more cooked patties of meat, placed inside a sliced bread roll or bun. The patty may be pan fried, grilled, smoked or flame broiled.</p>
+                        <div>
+                            <div class="price pull-left">Rs 125</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/1600711/pexels-photo-1600711.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Cheese and Garlic Sandwich</h1>
+                        <p>A cheese sandwich is a basic sandwich generally made with one or more varieties of cheese on any sort of bread, such as flat bread or wheat bread.</p>
+                        <div>
+                            <div class="price pull-left">Rs 50</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/803963/pexels-photo-803963.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Pasta In White Sauce</h1>
+                        <p>Simply prepare the white sauce – a mixture of butter, milk, flour and spices and pour it over your cooked pasta. This popular dish is vegetarian and can be served as a snack or light dinner.</p>
+                        <div>
+                            <div class="price pull-left">Rs 190</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/1893556/pexels-photo-1893556.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=1&amp;w=500" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>French fries</h1>
+                        <p>French fries, or simply fries, chips, finger chips, or French-fried potatoes, are baronet or allumette-cut deep-fried potatoes.</p>
+                        <div>
+                            <div class="price pull-left">Rs 90</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Pancake</h1>
+                        <p>A pancake is a flat cake, often thin and round, prepared from a starch-based batter that may contain eggs, milk and butter and cooked on a hot surface.</p>
+                        <div>
+                            <div class="price pull-left">Rs 175</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/45202/brownie-dessert-cake-sweet-45202.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Chocolate Brownie</h1>
+                        <p>A chocolate brownie or simply a brownie is a square or rectangular chocolate baked confection. Brownies come in a variety of forms and may be either fudgy or cakey, depending on their density.</p>
+                        <div>
+                            <div class="price pull-left">Rs 150</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/343871/pexels-photo-343871.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Rice Bowl</h1>
+                        <p>Rice Bowl is a dish of cooked rice that has been stir-fried in a wok or a frying pan and is usually mixed with other ingredients such as eggs, vegetables, seafood, or meat.</p>
+                        <div>
+                            <div class="price pull-left">Rs 150</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                      <div class="flip-card-front">
+                        <img class="img-fluid" src="https://images.pexels.com/photos/890515/pexels-photo-890515.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" alt="Avatar">
+                      </div>
+                      <div class="flip-card-back">
+                        <h1>Croissant</h1>
+                        <p>A croissant is a buttery, flaky, viennoiserie pastry of Austrian origin, named for its historical crescent shape.</p>
+                        <div>
+                            <div class="price pull-left">Rs 180</div>
+                            <a href="cart.html" class="pull-right btn btn-warning">Add to Cart</a> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+    </div>
+</div>
+</body>
 </html>

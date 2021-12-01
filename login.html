@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="login.css">
     
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content=".apps.googleusercontent.com">
+    <meta name="google-signin-client_id" content="PROJECT_ID.apps.googleusercontent.com">
     <script>
         function onSignIn(googleUser) {
             var profile = googleUser.getBasicProfile();
@@ -21,7 +21,7 @@
     </head>
     <body>
         <div class="login">
-            <h1>Secure Bank</h1>
+            <h1>Food.io</h1>
               <form method="POST" action="login.php" >
                 <input type="text" name="username" placeholder="Username" required="required" autocomplete="username"/>
                   <input type="password" name="password" placeholder="Password" required="required" autocomplete="current-password" />
