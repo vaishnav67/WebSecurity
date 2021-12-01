@@ -1,6 +1,16 @@
-# WebSecurity
+# Key Analysis of Multifactor Authentication
 BCI3001 Project
 
-Vaishnav Santhosh 19BCE2450
+* Vaishnav Santhosh - 19BCE2450
+* Keerthana Rajeev - 19BCE2448
 
-Keerthana Rajeev 19BCE2448
+# Authentication Method
+* Standard Password
+* OAuth
+* Mail OTP
+* Authenticator Apps
+* Security Questions
+
+# Libraries Used
+* [RobThree/TwoFactorAuth](https://github.com/RobThree/TwoFactorAuth)
+* [PHPMailer/PHPMailer](https://github.com/PHPMailer/PHPMailer)
